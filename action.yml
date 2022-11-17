@@ -15,7 +15,7 @@ inputs:
   git_username:
     description: "Username for remote repository"
     required: true
-  git_token:
+  git_password:
     description: "The git https token for the remote repository"
     required: true
   git_push_args:
@@ -23,7 +23,7 @@ inputs:
     required: false
     default: "--tags --force --prune"
   debug:
-    description: "set to "true" to enable debug mode"
+    description: "set to 'true' to enable debug mode"
     default: "false"
     required: false
 
