@@ -17,4 +17,9 @@ git config --global credential.helper cache
 
 git remote add ${INPUT_GIT_REMOTE_NAME} ${INPUT_GIT_REMOTE_URL}
 
-git push ${INPUT_GIT_PUSH_ARGS} ${INPUT_GIT_REMOTE_NAME} "\"refs/remotes/origin/*:refs/heads/*\""
+if [ ${INPUT_GIT_REF_SPEC} ];
+then
+  git push ${INPUT_GIT_PUSH_ARGS} ${INPUT_GIT_REMOTE_NAME} "${INPUT_GIT_REF_SPEC}"
+else
+  git push ${INPUT_GIT_PUSH_ARGS} ${INPUT_GIT_REMOTE_NAME}
+fi
