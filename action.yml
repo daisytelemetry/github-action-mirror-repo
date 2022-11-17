@@ -1,0 +1,32 @@
+name: mirror-repo
+description: Mirror a git repo to another
+branding:
+  icon: git-commit
+  color: green
+
+inputs:
+  git_remote_name:
+    description: "The remote ref name to use. 'mirror' by default. Useful to avoid conflicts with existing remotes."
+    required: false
+    default: "mirror"
+  git_remote_url:
+    description: "The remote repository e.g. https://git.swisscom.com/scm/daisy/github-cicd-test.git"
+    required: true
+  git_username:
+    description: "Username for remote repository"
+    required: true
+  git_token:
+    description: "The git https token for the remote repository"
+    required: true
+  git_push_args:
+    description: "Git arguments passed to push"
+    required: false
+    default: "--tags --force --prune"
+  debug:
+    description: "set to "true" to enable debug mode"
+    default: "false"
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
