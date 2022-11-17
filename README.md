@@ -7,5 +7,5 @@ Required arguments:
 
 Optional arguments:
 - git_remote_name: str (default: mirror)
-- git_push_args: str (default: "--tags --force --prune")
+- git_push_args: str (default: "--all --force --prune")
 - debug: bool 

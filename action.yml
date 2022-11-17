@@ -21,7 +21,7 @@ inputs:
   git_push_args:
     description: "Git arguments passed to push"
     required: false
-    default: "--force --all"
+    default: "--force --all --prune"
   git_ref_spec:
     description: "git refspec definition"
     required: false
