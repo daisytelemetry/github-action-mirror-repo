@@ -21,10 +21,11 @@ inputs:
   git_push_args:
     description: "Git arguments passed to push"
     required: false
-    default: "--force --all --prune"
-  git_ref_spec:
+    default: "--force --prune"
+  git_push_all_refs:
     description: "git refspec definition"
-    required: false
+    required: true
+    default: true
   debug:
     description: "set to 'true' to enable debug mode"
     default: "false"
